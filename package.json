@@ -8,18 +8,11 @@
     "dev": "vite",
     "build": "tsc",
     "start": "node dist/server.js",
-    "vercel-build": "npx prisma generate && npm run build",
-    "postbuild": "npx prisma generate",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix",
-    "migrate": "npx prisma migrate dev",
-    "migrate:prod": "npx prisma migrate deploy",
-    "db:seed": "npx prisma db seed",
-    "db:studio": "npx prisma studio",
-    "health-check": "node scripts/health-check.js"
+    "lint:fix": "eslint src/**/*.ts --fix"
   },
   "dependencies": {
     "@prisma/client": "^5.6.0",
@@ -81,8 +74,5 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "vite": "^7.0.5"
-  },
-  "prisma": {
-    "seed": "ts-node prisma/seed.ts"
   }
 }
