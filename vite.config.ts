@@ -55,6 +55,6 @@ export default defineConfig({
     devSourcemap: false,
   },
   // Reduce logging
-  logLevel: 'warn',
+  logLevel: 'info',
   clearScreen: false,
 })

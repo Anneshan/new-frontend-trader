@@ -16,6 +16,8 @@ import {
   X,
 } from 'lucide-react';
 
+console.log("LandingPage loaded");
+
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
