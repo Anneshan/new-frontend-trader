@@ -4,7 +4,7 @@
 import { config } from '../config/environment';
 
 // const ENCRYPTION_KEY = config.ENCRYPTION_KEY;
-export const ENCRYPTION_KEY = 'a1b2c3d4e5f678901234567890abcdef';
+const ENCRYPTION_KEY = 'a1b2c3d4e5f678901234567890abcdef';
 const ALGORITHM = 'aes-256-gcm';
 
 if (ENCRYPTION_KEY.length !== 32) {
