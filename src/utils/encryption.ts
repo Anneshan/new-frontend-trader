@@ -3,7 +3,15 @@
 
 import { config } from '../config/environment';
 
-const ENCRYPTION_KEY = config.ENCRYPTION_KEY;
+// const ENCRYPTION_KEY = config.ENCRYPTION_KEY;
+export const ENCRYPTION_KEY = 'a1b2c3d4e5f678901234567890abcdef';
+const ALGORITHM = 'aes-256-gcm';
+
+if (ENCRYPTION_KEY.length !== 32) {
+  throw new Error('ENCRYPTION_KEY must be exactly 32 characters long');
+}
+
+console.log('ENCRYPTION_KEY value:', ENCRYPTION_KEY, 'length:', ENCRYPTION_KEY.length);
 
 // Convert string key to CryptoKey
 async function getCryptoKey(): Promise<CryptoKey> {
